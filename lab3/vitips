@@ -1,0 +1,51 @@
+
+You can use vi to do global search and replace.  FIrst get out of insert
+mode by pressing escape.  All the really powerful vi stuff is done in edit
+mode.
+
+Let's say that I pass the ball array to many functions in a file.  I want
+to swtich to passing a struct pointer
+
+Here is an example that I want to change:
+void print_ball(unsinged char bits, double ball[])
+
+I type this into vi and press enter:
+
+:1,$s/double ball\[\]/struct Ball *bp/gp
+
+What's taht do?
+:	talks to the line editor underneath the visual editor
+1,$	tells it that I want this to apply to all lines between line 1 and
+	the very last line ($ is the last line).
+s	s is for substitute.
+
+/string1/string2/	
+
+	string1 gets replaced with string2.  Since [ and ] are special 
+	characters, we use backslash to turn off their special meaning by
+	typing \[ and \] in the strings
+
+g	global: if this string appears more than once on a line, replace
+	them all.
+
+p	print - tell me what the results were.
+
+What do I get?
+void print_ball(unsinged char bits, struct Ball *bp)
+
+I get that substitution on every line in the file.
+
+Another one is:
+
+:1,$s/ball\[X\]/bp->X/gp
+
+That turns this fragment:
+    bits, ball[X], ball[Y], ball[VX], ball[VY] );
+into:
+    bits, bp->X, ball[Y], ball[VX], ball[VY] );
+
+
+You could about 5 or so sommands like this to transform a lab 2 file into a
+lab 3 file.
+
+
