@@ -1,5 +1,4 @@
 #include <math.h>
-#include "bits.h"
 #include "constants.h"
 #include "output.h"
 
@@ -29,7 +28,7 @@ static void rob_energy_loss(double* ball) {
 }
 
 static void check_constr_L_wall(double* ball, unsigned char ch) {
-	if(ball[X] < X_width/2){
+	if(ball[X] < -X_width/2){
 		print_msg_L_wall(ball, ch);
 		ball[X] += -X_width/2-ball[X];
 		ball[VX] = -ball[VX];
@@ -61,11 +60,8 @@ void check_constr_wall(double* ball, unsigned char ch) {
 }
 
 
-int is_off_table(double* ball, unsigned char* ch) {
-	int is_off;
-	is_off = ball[Y]<0;
-	if(is_off)	change_status_2(ch, ST_OFF_TABLE);	
-	return is_off;
+int is_off_table(double* ball, unsigned char ch) {
+	return ball[Y]<0;
 }
 
 void convert_polar_2_rect(double* ball) {

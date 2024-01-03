@@ -1,3 +1,5 @@
+#include "bits.h"
+
 #define st_shift 6
 #define st_mask 0X03
 #define cl_shift 3

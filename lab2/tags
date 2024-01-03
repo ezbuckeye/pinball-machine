@@ -1,68 +1,60 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
-!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
-!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
-!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/parallels/Documents/pinball-machine/lab2/	//
-!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
-!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
-!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	5.9.0	//
-%.o	makefile	/^%.o:%.c *.h$/;"	t
-ACC_Y	physics.c	/^#define ACC_Y /;"	d	file:
-DEBUG	debug.h	/^#define DEBUG /;"	d
-DELTA_T	constants.h	/^#define DELTA_T /;"	d
-FORCE	constants.h	/^#define FORCE /;"	d
-GRAPHICS	debug.h	/^#define GRAPHICS /;"	d
-M_PI	constants.h	/^# define M_PI /;"	d
-ROB_LOSS	physics.c	/^#define ROB_LOSS /;"	d	file:
-ST_IN_PLAY	constants.h	/^#define ST_IN_PLAY /;"	d
-ST_NOT_USED	constants.h	/^#define ST_NOT_USED /;"	d
-ST_OFF_TABLE	constants.h	/^#define ST_OFF_TABLE /;"	d
-ST_ON_LAUNCH	constants.h	/^#define ST_ON_LAUNCH /;"	d
-TEXT	debug.h	/^#define TEXT /;"	d
-THETA	constants.h	/^#define THETA /;"	d
-VERBOSE	debug.h	/^#define VERBOSE /;"	d
-VX	constants.h	/^#define VX /;"	d
-VY	constants.h	/^#define VY /;"	d
-X	constants.h	/^#define X /;"	d
-X_width	physics.c	/^#define X_width /;"	d	file:
-Y	constants.h	/^#define Y /;"	d
-Y_depth	physics.c	/^#define Y_depth /;"	d	file:
-after_read_ball	input.c	/^static void after_read_ball() {$/;"	f	typeref:typename:void	file:
-all	makefile	/^all:  tags headers lab2 $/;"	t
-ch	input.c	/^unsigned char ch;$/;"	v	typeref:typename:unsigned char
-change_status_2	bits.c	/^void change_status_2(unsigned char* ch, unsigned char new_st) {$/;"	f	typeref:typename:void
-check_constr_L_wall	physics.c	/^static void check_constr_L_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void	file:
-check_constr_R_wall	physics.c	/^static void check_constr_R_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void	file:
-check_constr_T_wall	physics.c	/^static void check_constr_T_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void	file:
-check_constr_wall	physics.c	/^void check_constr_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-cl_mask	bits.c	/^#define cl_mask /;"	d	file:
-cl_shift	bits.c	/^#define cl_shift /;"	d	file:
-convert_THETA_FORCE_2_VX_VY	physics.c	/^void convert_THETA_FORCE_2_VX_VY(double* ball) {$/;"	f	typeref:typename:void
-convert_polar_2_rect	physics.c	/^void convert_polar_2_rect(double* ball) {$/;"	f	typeref:typename:void
-do_simulation	lab2.c	/^void do_simulation(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-get_color	bits.c	/^int get_color(unsigned char ch) {$/;"	f	typeref:typename:int
-headers	makefile	/^headers: *.c tags$/;"	t
-init_file_pointer	input.c	/^static int init_file_pointer(FILE* fp) {$/;"	f	typeref:typename:int	file:
-input_loop_trigger	input.c	/^void input_loop_trigger() {$/;"	f	typeref:typename:void
-is_off_table	physics.c	/^int is_off_table(double* ball, unsigned char* ch) {$/;"	f	typeref:typename:int
-lab2	makefile	/^lab2: lab2.o input.o n2.o output.o physics.o constants.o $/;"	t
-main	lab2.c	/^int main() {$/;"	f	typeref:typename:int
-print_ST_X_Y_VX_VY	output.c	/^static void print_ST_X_Y_VX_VY(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void	file:
-print_msg_L_wall	output.c	/^void print_msg_L_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_msg_R_wall	output.c	/^void print_msg_R_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_msg_T_wall	output.c	/^void print_msg_T_wall(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_msg_launched	output.c	/^void print_msg_launched(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_msg_loaded	output.c	/^void print_msg_loaded(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_msg_off_table	output.c	/^void print_msg_off_table(double* ball, unsigned char ch) {$/;"	f	typeref:typename:void
-print_tab	output.c	/^void print_tab(double* ball, unsigned char ch, double time) {$/;"	f	typeref:typename:void
-read_ball	input.c	/^static int read_ball() {$/;"	f	typeref:typename:int	file:
-rob_energy_loss	physics.c	/^static void rob_energy_loss(double* ball) {$/;"	f	typeref:typename:void	file:
-st_mask	bits.c	/^#define st_mask /;"	d	file:
-st_shift	bits.c	/^#define st_shift /;"	d	file:
-tags	makefile	/^tags: *.c$/;"	t
-update_ball	physics.c	/^void update_ball(double* ball) {$/;"	f	typeref:typename:void
-update_ball_pos	physics.c	/^static void update_ball_pos(double* ball) {$/;"	f	typeref:typename:void	file:
-update_ball_vol	physics.c	/^static void update_ball_vol(double* ball) {$/;"	f	typeref:typename:void	file:
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACC_Y	physics.c	7;"	d	file:
+BITS_H__	bits.h	4;"	d
+DEBUG	debug.h	16;"	d
+DELTA_T	constants.h	5;"	d
+FORCE	constants.h	11;"	d
+GRAPHICS	debug.h	14;"	d
+M_PI	constants.h	6;"	d
+ROB_LOSS	physics.c	8;"	d	file:
+ST_IN_PLAY	constants.h	17;"	d
+ST_NOT_USED	constants.h	15;"	d
+ST_OFF_TABLE	constants.h	16;"	d
+ST_ON_LAUNCH	constants.h	18;"	d
+TEXT	debug.h	13;"	d
+THETA	constants.h	10;"	d
+VERBOSE	debug.h	12;"	d
+VX	constants.h	12;"	d
+VY	constants.h	13;"	d
+X	constants.h	8;"	d
+X_width	physics.c	5;"	d	file:
+Y	constants.h	9;"	d
+Y_depth	physics.c	6;"	d	file:
+after_read_ball	input.c	/^static void after_read_ball(double* ball, unsigned char* ch) {$/;"	f	file:
+ball	input.c	/^double* ball;$/;"	v
+ch	input.c	/^unsigned char ch;$/;"	v
+change_status_2	bits.c	/^void change_status_2(unsigned char* ch, unsigned char new_st) {$/;"	f
+check_constr_L_wall	physics.c	/^static void check_constr_L_wall(double* ball, unsigned char ch) {$/;"	f	file:
+check_constr_R_wall	physics.c	/^static void check_constr_R_wall(double* ball, unsigned char ch) {$/;"	f	file:
+check_constr_T_wall	physics.c	/^static void check_constr_T_wall(double* ball, unsigned char ch) {$/;"	f	file:
+check_constr_wall	physics.c	/^void check_constr_wall(double* ball, unsigned char ch) {$/;"	f
+cl_mask	bits.c	6;"	d	file:
+cl_shift	bits.c	5;"	d	file:
+convert_THETA_FORCE_2_VX_VY	physics.c	/^void convert_THETA_FORCE_2_VX_VY(double* ball) {$/;"	f
+convert_polar_2_rect	physics.c	/^void convert_polar_2_rect(double* ball) {$/;"	f
+do_simulation	lab2.c	/^void do_simulation(double* ball, unsigned char ch) {$/;"	f
+get_color	bits.c	/^int get_color(unsigned char ch) {$/;"	f
+init_file_pointer	input.c	/^static int init_file_pointer(FILE** fp) {$/;"	f	file:
+input_loop_trigger	input.c	/^void input_loop_trigger() {$/;"	f
+is_off_table	physics.c	/^int is_off_table(double* ball, unsigned char ch) {$/;"	f
+main	lab2.c	/^int main() {$/;"	f
+print_ST_X_Y_VX_VY	output.c	/^static void print_ST_X_Y_VX_VY(double* ball, unsigned char ch) {$/;"	f	file:
+print_msg_L_wall	output.c	/^void print_msg_L_wall(double* ball, unsigned char ch) {$/;"	f
+print_msg_R_wall	output.c	/^void print_msg_R_wall(double* ball, unsigned char ch) {$/;"	f
+print_msg_T_wall	output.c	/^void print_msg_T_wall(double* ball, unsigned char ch) {$/;"	f
+print_msg_launched	output.c	/^void print_msg_launched(double* ball, unsigned char ch) {$/;"	f
+print_msg_loaded	output.c	/^void print_msg_loaded(double* ball, unsigned char ch) {$/;"	f
+print_msg_off_table	output.c	/^void print_msg_off_table(double* ball, unsigned char ch) {$/;"	f
+print_tab	output.c	/^void print_tab(double* ball, unsigned char ch, double time) {$/;"	f
+read_ball	input.c	/^static int read_ball(FILE* fp, double* ball, unsigned char* ch) {$/;"	f	file:
+rob_energy_loss	physics.c	/^static void rob_energy_loss(double* ball) {$/;"	f	file:
+st_mask	bits.c	4;"	d	file:
+st_shift	bits.c	3;"	d	file:
+update_ball	physics.c	/^void update_ball(double* ball) {$/;"	f
+update_ball_pos	physics.c	/^static void update_ball_pos(double* ball) {$/;"	f	file:
+update_ball_vol	physics.c	/^static void update_ball_vol(double* ball) {$/;"	f	file:

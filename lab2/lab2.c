@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "input.h"
+#include "bits.h"
 #include "n2.h"
 #include "output.h"
 #include "physics.h"
@@ -26,7 +27,7 @@ void do_simulation(double* ball, unsigned char ch) {
 
 	start = now();
 	cur_interval = 0;
-	while(!is_off_table(ball, &ch)) { 
+	while(!is_off_table(ball, ch)) { 
 		clock = now() - start;
 		if(clock >= cur_interval*DELTA_T){
 			/* if hit the wall */
@@ -39,5 +40,6 @@ void do_simulation(double* ball, unsigned char ch) {
 			update_ball(ball); 
 		}
 	}
-	print_msg_off_table(ball, ch); 
+	print_msg_off_table(ball, ch);
+	change_status_2(&ch, ST_OFF_TABLE); 
 }

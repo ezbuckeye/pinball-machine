@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "constants.h"
 #include "debug.h"
-#include "bits.c"
+#include "bits.h"
 
 static void print_ST_X_Y_VX_VY(double* ball, unsigned char ch) {
-	printf("%04X    %09.5f %09.5f    %09.5f %09.5f\n", ch, ball[X], ball[Y], ball[VX], ball[VY]);	
+	printf("%hhX    %9.5f %9.5f    %9.5f %9.5f\n", ch, ball[X], ball[Y], ball[VX], ball[VY]);	
 }
 
 void print_tab(double* ball, unsigned char ch, double time) {
@@ -23,13 +23,13 @@ void print_msg_off_table(double* ball, unsigned char ch) {
 
 void print_msg_loaded(double* ball, unsigned char ch) {
 	if(TEXT) {
-		printf("Loaded %02X %d ball at %.5f, %.5f %.5f deg %.5f ips\n", ch, get_color(ch), ball[X], ball[Y], ball[THETA], ball[FORCE]);
+		printf("Loaded %hhX %d ball at %.5f, %.5f %.5f deg %.5f ips\n", ch, get_color(ch), ball[X], ball[Y], ball[THETA], ball[FORCE]);
 	}
 }
 
 void print_msg_launched(double* ball, unsigned char ch) {
 	if(TEXT) {
-		printf("Launched %02X %d ball at %.5f, %.5f at %.5f, %.5f\n", ch, get_color(ch), ball[X], ball[Y], ball[VX], ball[VY]);
+		printf("Launched %hhX %d ball at %.5f, %.5f at %.5f, %.5f\n", ch, get_color(ch), ball[X], ball[Y], ball[VX], ball[VY]);
 	}
 }
 
