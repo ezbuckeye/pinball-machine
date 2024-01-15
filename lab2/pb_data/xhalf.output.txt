@@ -1,0 +1,2 @@
+Final scanf call returned 3
+Total runtime is 0.000075579 seconds
