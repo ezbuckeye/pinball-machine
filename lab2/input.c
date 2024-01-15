@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "constants.h"
+#include "debug.h"
 #include "bits.h"
 #include "output.h"
 #include "lab2.h"
@@ -42,10 +43,14 @@ void input_loop_trigger() {
 	FILE* fp;
 	double ball[4];
 	unsigned char ch;
+	int ret;
 	if(!init_file_pointer(&fp))	return;
-	while(read_ball(fp, ball, &ch)==5){
+	while((ret=read_ball(fp, ball, &ch))==5){
 		after_read_ball(ball, &ch);	
 		do_simulation(ball, ch);
+	}
+	if(TEXT) {
+		printf("Final scanf call returned %d", ret);
 	}
 		
 }
