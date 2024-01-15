@@ -26,8 +26,6 @@ X_width	physics.c	5;"	d	file:
 Y	constants.h	9;"	d
 Y_depth	physics.c	6;"	d	file:
 after_read_ball	input.c	/^static void after_read_ball(double* ball, unsigned char* ch) {$/;"	f	file:
-ball	input.c	/^double* ball;$/;"	v
-ch	input.c	/^unsigned char ch;$/;"	v
 change_status_2	bits.c	/^void change_status_2(unsigned char* ch, unsigned char new_st) {$/;"	f
 check_constr_L_wall	physics.c	/^static void check_constr_L_wall(double* ball, unsigned char ch) {$/;"	f	file:
 check_constr_R_wall	physics.c	/^static void check_constr_R_wall(double* ball, unsigned char ch) {$/;"	f	file:
@@ -39,7 +37,6 @@ convert_THETA_FORCE_2_VX_VY	physics.c	/^void convert_THETA_FORCE_2_VX_VY(double*
 convert_polar_2_rect	physics.c	/^void convert_polar_2_rect(double* ball) {$/;"	f
 do_simulation	lab2.c	/^void do_simulation(double* ball, unsigned char ch) {$/;"	f
 get_color	bits.c	/^int get_color(unsigned char ch) {$/;"	f
-init_file_pointer	input.c	/^static int init_file_pointer(FILE** fp) {$/;"	f	file:
 input_loop_trigger	input.c	/^void input_loop_trigger() {$/;"	f
 is_off_table	physics.c	/^int is_off_table(double* ball, unsigned char ch) {$/;"	f
 main	lab2.c	/^int main() {$/;"	f
@@ -51,7 +48,7 @@ print_msg_launched	output.c	/^void print_msg_launched(double* ball, unsigned cha
 print_msg_loaded	output.c	/^void print_msg_loaded(double* ball, unsigned char ch) {$/;"	f
 print_msg_off_table	output.c	/^void print_msg_off_table(double* ball, unsigned char ch) {$/;"	f
 print_tab	output.c	/^void print_tab(double* ball, unsigned char ch, double time) {$/;"	f
-read_ball	input.c	/^static int read_ball(FILE* fp, double* ball, unsigned char* ch) {$/;"	f	file:
+read_ball	input.c	/^static int read_ball(double* ball, unsigned char* ch) {$/;"	f	file:
 rob_energy_loss	physics.c	/^static void rob_energy_loss(double* ball) {$/;"	f	file:
 st_mask	bits.c	4;"	d	file:
 st_shift	bits.c	3;"	d	file:

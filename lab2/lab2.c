@@ -16,7 +16,7 @@ int main() {
 	input_loop_trigger(); 
 
 	runtime = now() - start;
-	printf("Total runtime is %.91f seconds\n", runtime);\
+	printf("Total runtime is %.9lf seconds\n", runtime);\
 
 	return EXIT_SUCCESS;
 }
@@ -33,7 +33,7 @@ void do_simulation(double* ball, unsigned char ch) {
 			/* if hit the wall */
 			check_constr_wall(ball, ch);
 			/* Output the ball */
-			print_tab(ball, ch, clock);
+			print_tab(ball, ch, cur_interval*DELTA_T);
 			/* Update the clock */
 			cur_interval++;
 			/* Update the ball floating point data */	
