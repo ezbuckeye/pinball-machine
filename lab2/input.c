@@ -7,7 +7,7 @@
 #include "physics.h"
 
 static int read_ball(double* ball, unsigned char* ch) {
-	return scanf("%hhx %lf %lf %lf %lf", ch, &ball[X], &ball[Y], &ball[THETA], &ball[FORCE]);
+	return scanf("%hhx %lf %lf %lf %lf", ch, &ball[CX], &ball[CY], &ball[THETA], &ball[FORCE]);
 }
 
 static void after_read_ball(double* ball, unsigned char* ch) {

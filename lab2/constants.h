@@ -5,8 +5,8 @@
 #define DELTA_T (1.0/64.0)
 # define M_PI           3.14159265358979323846  /* pi */
 
-#define X 0
-#define Y 1
+#define CX 0
+#define CY 1
 #define THETA 2
 #define FORCE 3
 #define VX 2

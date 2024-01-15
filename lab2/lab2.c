@@ -2,19 +2,22 @@
 #include <stdlib.h>
 #include "input.h"
 #include "bits.h"
+#include "libpb.h"
 #include "n2.h"
 #include "output.h"
 #include "physics.h"
 #include "constants.h"
+#include "debug.h"
 
 int main() {
 	double start, runtime;
 
 	start = now();
-
-	/* initialization */
-	input_loop_trigger(); 
-
+	if(TEXT || (GRAPHICS && pb_initialize())){
+		/* initialization */
+		input_loop_trigger(); 
+		if(GRAPHICS)	pb_teardown();
+	}
 	runtime = now() - start;
 	printf("Total runtime is %.9lf seconds\n", runtime);\
 

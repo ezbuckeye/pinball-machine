@@ -6,6 +6,8 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 ACC_Y	physics.c	7;"	d	file:
 BITS_H__	bits.h	4;"	d
+CX	constants.h	8;"	d
+CY	constants.h	9;"	d
 DEBUG	debug.h	16;"	d
 DELTA_T	constants.h	5;"	d
 FORCE	constants.h	11;"	d
@@ -21,9 +23,7 @@ THETA	constants.h	10;"	d
 VERBOSE	debug.h	12;"	d
 VX	constants.h	12;"	d
 VY	constants.h	13;"	d
-X	constants.h	8;"	d
 X_width	physics.c	5;"	d	file:
-Y	constants.h	9;"	d
 Y_depth	physics.c	6;"	d	file:
 after_read_ball	input.c	/^static void after_read_ball(double* ball, unsigned char* ch) {$/;"	f	file:
 change_status_2	bits.c	/^void change_status_2(unsigned char* ch, unsigned char new_st) {$/;"	f

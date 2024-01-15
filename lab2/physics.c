@@ -9,8 +9,8 @@
 
 
 static void update_ball_pos(double* ball) {
-	ball[X] += ball[VX] * DELTA_T;
-	ball[Y] += (ball[VY] * DELTA_T + 0.5*ACC_Y*DELTA_T*DELTA_T);
+	ball[CX] += ball[VX] * DELTA_T;
+	ball[CY] += (ball[VY] * DELTA_T + 0.5*ACC_Y*DELTA_T*DELTA_T);
 }
 
 static void update_ball_vol(double* ball) {
@@ -28,27 +28,27 @@ static void rob_energy_loss(double* ball) {
 }
 
 static void check_constr_L_wall(double* ball, unsigned char ch) {
-	if(ball[X] < -X_width/2){
+	if(ball[CX] < -X_width/2){
 		print_msg_L_wall(ball, ch);
-		ball[X] = -X_width/2 + (-X_width/2-ball[X]);
+		ball[CX] = -X_width/2 + (-X_width/2-ball[CX]);
 		ball[VX] = -ball[VX];
 		rob_energy_loss(ball);
 	}
 }
 
 static void check_constr_R_wall(double* ball, unsigned char ch) {
-	if(ball[X] > X_width/2){
+	if(ball[CX] > X_width/2){
 		print_msg_R_wall(ball, ch);
-		ball[X] = X_width/2 - (ball[X]-X_width/2);
+		ball[CX] = X_width/2 - (ball[CX]-X_width/2);
 		ball[VX] = -ball[VX];
 		rob_energy_loss(ball);
 	}
 }
 
 static void check_constr_T_wall(double* ball, unsigned char ch) {
-	if(ball[Y] > Y_depth){
+	if(ball[CY] > Y_depth){
 		print_msg_T_wall(ball, ch);
-		ball[Y] = Y_depth - (ball[Y]-Y_depth); 
+		ball[CY] = Y_depth - (ball[CY]-Y_depth); 
 		ball[VY] = -ball[VY];
 		rob_energy_loss(ball);
 	}
@@ -61,7 +61,7 @@ void check_constr_wall(double* ball, unsigned char ch) {
 
 
 int is_off_table(double* ball, unsigned char ch) {
-	return ball[Y]<0;
+	return ball[CY]<0;
 }
 
 void convert_polar_2_rect(double* ball) {

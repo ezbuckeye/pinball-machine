@@ -11,8 +11,8 @@ all:  tags headers lab2
 # NEVER compile .c files with this rule - it lacks needed compile time flags
 # There is an entry below that turns .c files into .o files
 
-lab2: lab2.o bits.o input.o n2.o output.o physics.o 
-	gcc -g -o $@ $^ -lm
+lab2: lab2.o bits.o input.o output.o physics.o 
+	gcc -g -o $@ $^ -L. -lpb -lncurses -lm
 
 #this is where you create an entry to build yuour zip file
 #it will also update with new labs
